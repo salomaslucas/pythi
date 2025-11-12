@@ -1,0 +1,327 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Aula 1"
+      ],
+      "metadata": {
+        "id": "oWwIJdTn3hUW"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Hackathon de Inovação 2025\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "As7u4tl6vASU",
+        "outputId": "1f85debe-4ab6-433e-e49d-88122e1c34d0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hackathon de Inovação 2025\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "edicao = \"IV\"\n",
+        "\n",
+        "print(edicao, \"Hackathon de Inovação\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-kLPKftcxTAl",
+        "outputId": "7a51392d-a057-4a8f-d9dc-7605bc5c7f8d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "IV Hackathon de Inovação\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(f\"{edicao} Hackathon de Inovação\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WLUAVjl4xvuW",
+        "outputId": "ef030785-6a16-4fdb-80d5-b6cc267ef6ff"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "IV Hackathon de Inovação\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Aula 2"
+      ],
+      "metadata": {
+        "id": "f1KsTmx03lxi"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Contexto:\n",
+        "\n",
+        "Uma academia está promovendo um desafio fitness, onde cada participante recebe medalhas ao completar diferentes tipos de treinos. Essas medalhas podem ser trocadas por prêmios e descontos na academia. As categorias de treinos têm valores de medalhas diferentes:\n",
+        "\n",
+        "* Treino aeróbico: 15 medalhas\n",
+        "* Treino de força: 12 medalhas\n",
+        "* Treino funcional: 9 medalhas\n",
+        "\n",
+        "**Problema:**\n",
+        "\n",
+        "Felipe completou um treino de cada categoria. Agora ele quer saber quantas medalhas acumulou.\n",
+        "\n",
+        "Nosso objetivo é criar um programa em Python que:\n",
+        "\n",
+        "* Armazene a quantidade de medalhas de cada categoria de treino em uma variável.\n",
+        "* Calcule o total de medalhas acumuladas por Felipe.\n",
+        "* Mostre na tela o total de medalhas acumuladas por Felipe."
+      ],
+      "metadata": {
+        "id": "UiUmhq023phx"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "treino_aerobico = 15\n",
+        "treino_forca = 12\n",
+        "treino_funcional = 9\n",
+        "\n",
+        "medalhas_felipe = treino_aerobico + treino_forca + treino_funcional\n",
+        "\n",
+        "print(f\"As medalhas totais do Felipe são: {medalhas_felipe}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GQRpxCIk4B_O",
+        "outputId": "cad1f838-f515-4a70-9cc5-ef516de4b45c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "As medalhas totais do Felipe são: 36\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Desafio\n",
+        "\n",
+        "Juliana também participou do desafio e completou 4 treinos aeróbicos e 3 treinos funcionais.\n",
+        "\n",
+        "Como podemos calcular o total de medalhas de Juliana? Será que é possível calcular o total de medalhas acumuladas por Felipe e Juliana juntos?"
+      ],
+      "metadata": {
+        "id": "SwK66FFS44_1"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Aula 3\n"
+      ],
+      "metadata": {
+        "id": "EDZC6pjHbhA8"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Divisão de Cards Colecionáveis\n",
+        "\n",
+        "Um grupo de colecionadores encontrou uma caixa cheia de cards raros de um jogo. Para garantir uma divisão justa, todos concordaram com a sugestão de Lucas, o dono da caixa:\n",
+        "\n",
+        "Cada colecionador, exceto Lucas, deve receber exatamente o mesmo número de cards. Lucas deve receber quatro vezes a quantidade que cada colecionador recebe. O fato de Lucas ser o dono da caixa ajudou a convencer os outros, e felizmente a divisão era exata, sem sobrar nem faltar cards.\n",
+        "\n",
+        "**Problema:**\n",
+        "\n",
+        "Crie um programa que determine a quantidade de cards que Lucas recebeu, dado o número total de cards na caixa e o número de colecionadores amigos de Lucas.\n",
+        "\n",
+        "**Entrada:**\n",
+        "\n",
+        "* A primeira linha contém um número inteiro `total_cards`, que representa o número de cards na caixa.\n",
+        "* A segunda linha contém um número inteiro `numero_colecionadores`, que representa a quantidade de colecionadores amigos de Lucas (excluindo o próprio Lucas)."
+      ],
+      "metadata": {
+        "id": "Yd3mUA12bj7g"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "total_cards = int(input(\"Digite o total de cards: \"))\n",
+        "numero_colecionadores = int(input(\"Digite o número de colecionadores: \"))\n",
+        "\n",
+        "cards_colecionadores = total_cards // (numero_colecionadores + 4)\n",
+        "cards_lucas = 4 * cards_colecionadores\n",
+        "\n",
+        "print(f\"Lucas recebeu {cards_lucas} cards.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aL5npKxJheU8",
+        "outputId": "c2b64655-67b7-42c2-8c88-afd54d9315c6"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o total de cards: 120\n",
+            "Digite o número de colecionadores: 5\n",
+            "Lucas recebeu 53 cards.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Desafio\n",
+        "\n",
+        "Depois de dividir os cards na convenção, Lucas percebeu que ainda havia alguns cards extras em seu estojo. Ele decidiu que esses cards extras também devem ser distribuídos de forma justa entre ele e seus amigos colecionadores, mantendo a mesma regra:\n",
+        "\n",
+        "Cada colecionador recebe uma quantidade igual de cards.\n",
+        "Lucas recebe quatro vezes a quantidade de cards que cada colecionador recebe.\n",
+        "Ajude Lucas a distribuir todos os cards, incluindo os extras, de maneira justa, sem deixar nenhum card sobrando.\n",
+        "\n",
+        "Entrada\n",
+        "\n",
+        "* número total de cards na caixa.\n",
+        "* número de colecionadores amigos de Lucas (excluindo o próprio Lucas).\n",
+        "* número de cards extras encontrados no estojo de Lucas.\n",
+        "* calcular a nova quantidade total de cards, somando os extras.\n",
+        "* dividir os cards entre Lucas e seus amigos, garantindo que Lucas receba quatro vezes a quantidade de cards que cada colecionador.\n",
+        "exibir a quantidade de cards que Lucas recebeu."
+      ],
+      "metadata": {
+        "id": "SPWpMScwjCrj"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Aula 4\n",
+        "\n",
+        "Van Escolar\n",
+        "\n",
+        "\n",
+        "Uma escola está organizando uma visita ao museu de ciências e, para chegar lá, todos os estudantes e coordenadores devem usar uma van escolar. No entanto, a van tem uma capacidade máxima de 35 pessoas por viagem.\n",
+        "\n",
+        "Você precisa criar um programa que verifique se todos os estudantes e coordenadores podem ser transportados em apenas uma viagem.\n",
+        "\n",
+        "**Entrada**\n",
+        "\n",
+        "* Um número inteiro `numero_estudantes`, representando a quantidade de estudantes na visita.\n",
+        "* Um número inteiro `numero_coordenadores`, representando a quantidade de coordenadores na visita."
+      ],
+      "metadata": {
+        "id": "b1CiW6EUjo6L"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numero_estudantes = int(input(\"Digite a quantidade de estudantes: \"))\n",
+        "numero_coordenadores = int(input(\"Digite a quantidade de coordenadores: \"))\n",
+        "resposta_sim = \"Pode viajar\"\n",
+        "resposta_nao = \"Não pode viajar\"\n",
+        "\n",
+        "if numero_estudantes + numero_coordenadores <= 35:\n",
+        "  print(resposta_sim)\n",
+        "else:\n",
+        "  print(resposta_nao)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "O7W6sA7HodAk",
+        "outputId": "ac6b6820-a4e9-46b7-a520-82db59d0d7c1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a quantidade de estudantes: 20\n",
+            "Digite a quantidade de coordenadores: 8\n",
+            "Pode viajar\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Desafio\n",
+        "\n",
+        "Agora, imagine que infelizmente a van que carrega 35 pessoas está com problemas mecânicos e agora todo mundo vai precisar usar uma van reserva menor que só pode levar 22 pessoas. Além disso, 6 estagiários do museu também vão acompanhar a visita. Como fazemos para garantir que o número total de pessoas na van (estudantes, coordenadores e estagiários) não ultrapasse a capacidade máxima de 22 pessoas?\n",
+        "\n",
+        "Seu desafio é escrever um programa que verifique se é possível ou não levar todos em apenas uma viagem."
+      ],
+      "metadata": {
+        "id": "jHx2aNirp7wu"
+      }
+    }
+  ]
+}
